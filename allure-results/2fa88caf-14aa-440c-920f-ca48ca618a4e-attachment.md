@@ -1,0 +1,60 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Master Password Recovery Automation" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Practice automating the forgot password flow and enhance your software testing skills. Perfect for Selenium, Cypress, and Playwright learners.
+      - paragraph [ref=e8]: Develop hands-on experience with password reset processes and improve your QA automation expertise. 🚀
+    - img "Password Reset Illustration" [ref=e12]
+  - navigation [ref=e13]:
+    - generic [ref=e14]:
+      - link "TesterBud" [ref=e15] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e17]:
+        - link "Features" [ref=e18] [cursor=pointer]:
+          - /url: /practice-page-selection
+        - button "Practice Sites" [ref=e20] [cursor=pointer]
+        - link "About" [ref=e21] [cursor=pointer]:
+          - /url: /AboutPage
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - heading "Premium Bank" [level=1] [ref=e26]:
+        - img [ref=e27]
+        - text: Premium Bank
+      - paragraph [ref=e30]: Secure Banking Solutions
+    - generic [ref=e31]:
+      - generic [ref=e32]: "1"
+      - generic [ref=e33]: "2"
+      - generic [ref=e34]: "3"
+    - paragraph [ref=e37]: This page provides a practice environment for automating the password recovery process. You can use this to hone your skills in automating workflows involving email verification, security code entry, and password resets.
+    - generic [ref=e39]:
+      - heading "Verify Security Code" [level=3] [ref=e40]
+      - paragraph [ref=e41]: Enter the security code sent to your email. Practice automating code verification.
+      - alert [ref=e42]:
+        - generic [ref=e43]: Demo Credentials for Automation Practice
+        - paragraph [ref=e44]:
+          - strong [ref=e45]: "Email:"
+          - text: user@premiumbank.com
+        - paragraph [ref=e46]:
+          - strong [ref=e47]: "Secret Code:"
+          - text: BANK1234
+        - paragraph [ref=e48]:
+          - strong [ref=e49]: "Old Password:"
+          - text: Bank@123
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: Security Code
+          - textbox "Enter security code" [active] [ref=e53]
+        - button "Verify Code" [ref=e55] [cursor=pointer]
+    - generic [ref=e56]:
+      - paragraph [ref=e57]: © 2025 Premium Bank. All rights reserved.
+      - paragraph [ref=e58]: Secure 256-bit encrypted connection
+      - link "← Back to Practice UI Automation Page" [ref=e59] [cursor=pointer]:
+        - /url: /
+  - contentinfo [ref=e60]:
+    - generic [ref=e61]:
+      - paragraph [ref=e62]: Ready to start automating? Explore, practice, and master!
+      - text: © 2025 TesterBud | Built for learners by learners 🚀
+```

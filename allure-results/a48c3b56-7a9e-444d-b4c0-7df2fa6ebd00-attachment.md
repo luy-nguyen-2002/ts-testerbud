@@ -1,0 +1,86 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - 'heading "TesterBud: Dummy E-commerce Application" [level=1] [ref=e6]'
+      - paragraph [ref=e7]: Practice automating shopping cart functionalities, order placement, and product browsing on a realistic demo e-commerce site. 🚀
+    - img "Automation Illustration" [ref=e11]
+  - navigation [ref=e12]:
+    - generic [ref=e13]:
+      - link "TesterBud" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e16]:
+        - link "Features" [ref=e17] [cursor=pointer]:
+          - /url: /practice-page-selection
+        - button "Practice Sites" [ref=e19] [cursor=pointer]
+        - link "About" [ref=e20] [cursor=pointer]:
+          - /url: /AboutPage
+  - generic [ref=e23]:
+    - heading "Automate Web Forms" [level=2] [ref=e24]
+    - paragraph [ref=e25]: We do not store any data. Use dummy data only for automation practice.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: Country of Residence
+        - combobox [ref=e29]:
+          - option "Select Country" [selected]
+          - option "United States"
+          - option "Canada"
+          - option "United Kingdom"
+          - option "India"
+          - option "Australia"
+          - option "Other"
+      - generic [ref=e30]:
+        - generic [ref=e31]: Title
+        - combobox [ref=e32]:
+          - option "Select Title" [selected]
+          - option "Mr."
+          - option "Ms."
+          - option "Mrs."
+          - option "Dr."
+          - option "Prof."
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: First Name
+          - textbox [ref=e36]
+        - generic [ref=e37]:
+          - generic [ref=e38]: Last Name
+          - textbox [ref=e39]
+      - generic [ref=e40]:
+        - generic [ref=e41]: Date of Birth
+        - textbox "YYYY-MM-DD" [ref=e44]
+      - generic [ref=e45]:
+        - generic [ref=e46]: Date of Joining (dd/mm/yyyy)
+        - textbox "dd/mm/yyyy" [ref=e47]
+      - generic [ref=e48]:
+        - generic [ref=e49]: Email Address
+        - textbox [ref=e50]
+      - generic [ref=e51]:
+        - generic [ref=e52]: Phone Number
+        - generic [ref=e53]:
+          - combobox [ref=e55]:
+            - option "+1" [selected]
+            - option "+44"
+            - option "+91"
+            - option "+61"
+            - option "+86"
+            - option "+Other"
+          - textbox [ref=e57]
+      - generic [ref=e58]:
+        - generic [ref=e59]: Preferred Communication Method
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - radio [ref=e62]
+            - generic [ref=e63]: Email
+          - generic [ref=e64]:
+            - radio [ref=e65]
+            - generic [ref=e66]: Phone
+      - generic [ref=e67]:
+        - button "Clear" [ref=e68] [cursor=pointer]
+        - button "Submit" [ref=e69] [cursor=pointer]
+  - contentinfo [ref=e70]:
+    - generic [ref=e71]:
+      - paragraph [ref=e72]: Ready to start automating? Explore, practice, and master!
+      - text: © 2025 TesterBud | Built for learners by learners 🚀
+```
