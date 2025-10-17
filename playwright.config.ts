@@ -81,66 +81,66 @@ export default defineConfig({
       },
     },
 
-    // // 🥈 Apple Safari (WebKit)
-    // {
-    //   name: 'Apple Safari',
-    //   use: {
-    //     ...devices['Desktop Safari'],
-    //     locale: 'en-US',
-    //   },
-    // },
+    // 🥈 Apple Safari (WebKit)
+    {
+      name: 'Apple Safari',
+      use: {
+        ...devices['Desktop Safari'],
+        locale: 'en-US',
+      },
+    },
 
-    // // 🥉 Microsoft Edge (Chromium-based)
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: {
-    //     ...devices['Desktop Edge'],
-    //     channel: 'msedge',
-    //     locale: 'en-US',
-    //     launchOptions: {
-    //       args: ['--lang=en-US'],
-    //     },
-    //   },
-    // },
+    // 🥉 Microsoft Edge (Chromium-based)
+    {
+      name: 'Microsoft Edge',
+      use: {
+        ...devices['Desktop Edge'],
+        channel: 'msedge',
+        locale: 'en-US',
+        launchOptions: {
+          args: ['--lang=en-US'],
+        },
+      },
+    },
 
-    // // 4️⃣ Mozilla Firefox
-    // {
-    //   name: 'Mozilla Firefox',
-    //   use: {
-    //     ...devices['Desktop Firefox'],
-    //     locale: 'en-US',
-    //   },
-    // },
+    // 4️⃣ Mozilla Firefox
+    {
+      name: 'Mozilla Firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+        locale: 'en-US',
+      },
+    },
 
-    // // 5️⃣ Samsung Internet / Android WebView (Mobile Chrome equivalent)
-    // {
-    //   name: 'Samsung Internet (Android)',
-    //   use: {
-    //     ...devices['Galaxy S21'],
-    //     locale: 'en-US',
-    //     launchOptions: {
-    //       args: ['--lang=en-US'],
-    //     },
-    //   },
-    // },
+    // 5️⃣ Samsung Internet / Android WebView (Mobile Chrome equivalent)
+    {
+      name: 'Samsung Internet (Android)',
+      use: {
+        ...devices['Galaxy S21'],
+        locale: 'en-US',
+        launchOptions: {
+          args: ['--lang=en-US'],
+        },
+      },
+    },
 
-    // // 6️⃣ Optional: Opera / Brave / Vivaldi (Chromium-like)
-    // // Note: Playwright doesn’t have native Opera or Brave channels,
-    // // but Chrome channel simulates them closely.
-    // {
-    //   name: 'Opera / Brave (Chromium)',
-    //   use: {
-    //     ...devices['Desktop Chrome'],
-    //     locale: 'en-US',
-    //     launchOptions: {
-    //       args: [
-    //         '--lang=en-US',
-    //         '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
-    //         '(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 OPR/100.0.0.0',
-    //       ],
-    //     },
-    //   },
-    // },
+    // 6️⃣ Optional: Opera / Brave / Vivaldi (Chromium-like)
+    // Note: Playwright doesn’t have native Opera or Brave channels,
+    // but Chrome channel simulates them closely.
+    {
+      name: 'Opera / Brave (Chromium)',
+      use: {
+        ...devices['Desktop Chrome'],
+        locale: 'en-US',
+        launchOptions: {
+          args: [
+            '--lang=en-US',
+            '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
+            '(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 OPR/100.0.0.0',
+          ],
+        },
+      },
+    },
   ],
 
   /* Run your local dev server before starting the tests */
