@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:bdd": "bddgen && playwright test"
+    "test:bdd": "bddgen && playwright test",
+    "test:priority": "npx playwright test --grep \"@smoke|@positive\" & npx playwright test --grep-invert \"@smoke|@positive\""
   },
   "keywords": [],
   "author": "",

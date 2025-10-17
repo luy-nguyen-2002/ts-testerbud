@@ -52,15 +52,34 @@ jobs:
         run: |
           echo "BASE_URL is: $BASE_URL"
 
-      - name: Run Playwright BDD tests
+      # - name: Run Playwright BDD tests
+      #   env:
+      #     CI: "true"
+      #     HEADLESS: "true"
+          # BASE_URL: ${{ secrets.BASE_URL }}
+        # run: |
+        #   # optionally limit workers or run a shard
+        #   # npx playwright test --reporter=list
+        #   npx bddgen && npx playwright test --reporter=list,allure-playwright
+
+        # 🚀 Step 7: Run *important* tests first (e.g. smoke, positive)
+      - name: Run Priority Playwright BDD tests (@smoke, @positive)
         env:
           CI: "true"
           HEADLESS: "true"
-          # BASE_URL: ${{ secrets.BASE_URL }}
         run: |
-          # optionally limit workers or run a shard
-          # npx playwright test --reporter=list
-          npx bddgen && npx playwright test --reporter=list,allure-playwright
+          npx bddgen
+          npx playwright test --grep "@smoke|@positive" --reporter=list,allure-playwright
+
+      # ⚙️ Step 8: Run remaining tests (everything else)
+      - name: Run Remaining Playwright BDD tests
+        if: always() # run even if smoke tests failed
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx bddgen
+          npx playwright test --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
 
       - name: Generate Allure HTML report
               # Run this even if tests fail so you can inspect results
