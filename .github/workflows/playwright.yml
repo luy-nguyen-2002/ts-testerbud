@@ -35,14 +35,15 @@ jobs:
       - name: Install Playwright browsers (only what we need)
         run: npx playwright install --with-deps
 
-      - name: Load .env file
+      - name: Load .env.example as environment variables
         run: |
-          if [ -f .env ]; then
-            export $(grep -v '^#' .env | xargs)
+          if [ -f .env.example ]; then
+            export $(grep -v '^#' .env.example | xargs)
+            echo "Loaded environment variables from .env.example"
           else
-            echo "No .env file found"
+            echo "No .env.example file found"
           fi
-      
+
       - name: Debug environment
         run: printenv | grep BASE_URL || echo "BASE_URL not found"
 
