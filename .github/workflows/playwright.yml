@@ -35,24 +35,24 @@ jobs:
       - name: Install Playwright browsers (only what we need)
         run: npx playwright install --with-deps
 
-      - name: Load .env.example
+      - name: Load .env.example into environment
         run: |
           if [ -f .env.example ]; then
-            echo "Loading environment variables from .env.example"
-            set -a
-            # Remove carriage returns and comments
-            sed 's/\r$//' .env.example | grep -v '^#' > .env.tmp
-            source .env.tmp
-            set +a
-            rm .env.tmp
+            echo "Loading from .env.example"
+            # Remove CR characters, filter comments, then output each key=value to $GITHUB_ENV
+            sed 's/\r$//' .env.example | grep -v '^#' | while IFS='=' read -r key value; do
+              # optionally trim quotes/spaces
+              echo "${key}=${value}" >> $GITHUB_ENV
+            done
           else
             echo "No .env.example file found"
           fi
 
       - name: Debug environment
-        run: printenv | grep BASE_URL || echo "BASE_URL not found"
+        run: |
+          echo "BASE_URL is: $BASE_URL"
 
-      - name: Run Playwright tests
+      - name: Run Playwright BDD tests
         env:
           CI: "true"
           HEADLESS: "true"
