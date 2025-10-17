@@ -42,7 +42,7 @@ jobs:
         run: |
           # optionally limit workers or run a shard
           # npx playwright test --reporter=list
-          npm run test:bdd
+          npx bddgen && npx playwright test --reporter=list
 
       - name: Upload Playwright report (on failure)
         if: failure()
