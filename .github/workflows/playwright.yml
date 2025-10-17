@@ -39,10 +39,11 @@ jobs:
         env:
           CI: "true"
           HEADLESS: "true"
+          BASE_URL: ${{ secrets.BASE_URL }}
         run: |
           # optionally limit workers or run a shard
           # npx playwright test --reporter=list
-          npm run test:bdd
+          npx bddgen && npx playwright test --reporter=list
 
       - name: Upload Playwright report (on failure)
         if: failure()
