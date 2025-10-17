@@ -2,9 +2,9 @@ name: Playwright tests (CI)
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
 
 jobs:
   test:
@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: lts/*
-          cache: 'npm'            # optional built-in cache from setup-node
+          cache: "npm" # optional built-in cache from setup-node
 
       - name: Cache Playwright browsers
         id: cache-browsers
@@ -34,6 +34,14 @@ jobs:
 
       - name: Install Playwright browsers (only what we need)
         run: npx playwright install --with-deps
+
+      - name: Load .env file
+        run: |
+          if [ -f .env ]; then
+            export $(grep -v '^#' .env | xargs)
+          else
+            echo "No .env file found"
+          fi
       
       - name: Debug environment
         run: printenv | grep BASE_URL || echo "BASE_URL not found"
@@ -42,7 +50,7 @@ jobs:
         env:
           CI: "true"
           HEADLESS: "true"
-          BASE_URL: ${{ secrets.BASE_URL }}
+          # BASE_URL: ${{ secrets.BASE_URL }}
         run: |
           # optionally limit workers or run a shard
           # npx playwright test --reporter=list
