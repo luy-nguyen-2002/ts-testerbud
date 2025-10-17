@@ -34,6 +34,9 @@ jobs:
 
       - name: Install Playwright browsers (only what we need)
         run: npx playwright install --with-deps
+      
+      - name: Debug environment
+        run: printenv | grep BASE_URL || echo "BASE_URL not found"
 
       - name: Run Playwright tests
         env:
@@ -63,7 +66,3 @@ jobs:
             traces/
             videos/
           retention-days: 30
-      
-      - name: Debug environment
-        run: printenv | grep BASE_URL || echo "BASE_URL not found"
-
