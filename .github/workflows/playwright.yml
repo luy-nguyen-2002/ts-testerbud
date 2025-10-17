@@ -60,7 +60,21 @@ jobs:
         run: |
           # optionally limit workers or run a shard
           # npx playwright test --reporter=list
-          npx bddgen && npx playwright test --reporter=list
+          npx bddgen && npx playwright test --reporter=list,allure-playwright
+
+      - name: Generate Allure HTML report
+              # Run this even if tests fail so you can inspect results
+        if: always()
+        run: |
+          npx allure generate ./allure-results --clean -o allure-report
+
+      - name: Upload Allure report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
+          retention-days: 30
 
       - name: Upload Playwright report (on failure)
         if: failure()
