@@ -33,12 +33,12 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browsers (only what we need)
-        # if you only use chromium in CI, specify `chromium` to save time
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         env:
           CI: "true"
+          HEADLESS: "true"
         run: |
           # optionally limit workers or run a shard
           npx playwright test --reporter=list
