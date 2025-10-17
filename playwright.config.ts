@@ -44,7 +44,7 @@ export default defineConfig({
     baseURL: process.env.BASE_URL || "https://testerbud.com/",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     /* Headed for debugging */
-    headless: false, // ✅ show browser during local debugging
+    headless: true, // ✅ show browser during local debugging
     actionTimeout: 10000, // ✅ timeout for actions like click(), fill()
     navigationTimeout: 15000, // ✅ timeout for navigations
     screenshot: 'only-on-failure',

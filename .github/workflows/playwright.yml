@@ -63,3 +63,7 @@ jobs:
             traces/
             videos/
           retention-days: 30
+      
+      - name: Debug environment
+        run: printenv | grep BASE_URL || echo "BASE_URL not found"
+
