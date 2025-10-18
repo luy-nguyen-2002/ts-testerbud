@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
 
     steps:
       - name: Checkout
@@ -62,25 +62,103 @@ jobs:
         #   # npx playwright test --reporter=list
         #   npx bddgen && npx playwright test --reporter=list,allure-playwright
 
-        # 🚀 Step 7: Run *important* tests first (e.g. smoke, positive)
-      - name: Run Priority Playwright BDD tests (@smoke, @positive)
+        # Generate tests from features once (bddgen)
+      - name: Generate BDD tests (bddgen)
+        run: npx bddgen
+
+      # ---------- Priority tests: run on browsers in order ----------
+      - name: Priority tests — Google Chrome (@smoke|@positive)
         env:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx bddgen
-          npx playwright test --grep "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Google Chrome" --grep "@smoke|@positive" --reporter=list,allure-playwright
 
-      # ⚙️ Step 8: Run remaining tests (everything else)
-      - name: Run Remaining Playwright BDD tests
-        if: always() # run even if smoke tests failed
+      - name: Priority tests — Microsoft Edge (@smoke|@positive)
         env:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx bddgen
-          npx playwright test --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Microsoft Edge" --grep "@smoke|@positive" --reporter=list,allure-playwright
 
+      - name: Priority tests — Apple Safari (@smoke|@positive)
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Apple Safari" --grep "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Priority tests — Mozilla Firefox (@smoke|@positive)
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Mozilla Firefox" --grep "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Priority tests — Samsung Internet (Android) (@smoke|@positive)
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Samsung Internet (Android)" --grep "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Priority tests — Opera / Brave (Chromium) (@smoke|@positive)
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Opera / Brave (Chromium)" --grep "@smoke|@positive" --reporter=list,allure-playwright
+
+      # ---------- Remaining tests: run on browsers in same order ----------
+      - name: Remaining tests — Google Chrome (everything else)
+        if: always()
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Google Chrome" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Remaining tests — Microsoft Edge (everything else)
+        if: always()
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Microsoft Edge" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Remaining tests — Apple Safari (everything else)
+        if: always()
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Apple Safari" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Remaining tests — Mozilla Firefox (everything else)
+        if: always()
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Mozilla Firefox" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Remaining tests — Samsung Internet (Android) (everything else)
+        if: always()
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Samsung Internet (Android)" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+
+      - name: Remaining tests — Opera / Brave (Chromium) (everything else)
+        if: always()
+        env:
+          CI: "true"
+          HEADLESS: "true"
+        run: |
+          npx playwright test --project="Opera / Brave (Chromium)" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+      
+      # ---------------------------------------------------------------
       - name: Generate Allure HTML report
               # Run this even if tests fail so you can inspect results
         if: always()
