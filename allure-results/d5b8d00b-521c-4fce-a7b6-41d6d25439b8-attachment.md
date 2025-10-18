@@ -1,0 +1,259 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - 'heading "TesterBud: Dummy E-commerce Application" [level=1] [ref=e6]'
+      - paragraph [ref=e7]: Practice automating shopping cart functionalities, order placement, and product browsing on a realistic demo e-commerce site. 🚀
+    - img "Automation Illustration" [ref=e11]
+  - navigation [ref=e12]:
+    - generic [ref=e13]:
+      - link "TesterBud" [ref=e14]:
+        - /url: /
+      - generic [ref=e16]:
+        - link "Features" [ref=e17]:
+          - /url: /practice-page-selection
+        - button "Practice Sites" [ref=e19] [cursor=pointer]
+        - link "About" [ref=e20]:
+          - /url: /AboutPage
+  - generic [ref=e21]:
+    - navigation [ref=e22]:
+      - generic [ref=e23]:
+        - 'link "TesterBud: Premium Ecommerce" [ref=e24]':
+          - /url: /
+        - searchbox "Search" [ref=e28]
+        - button "2" [ref=e30] [cursor=pointer]:
+          - img [ref=e31]
+          - generic [ref=e33]: "2"
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e37]:
+          - img "Laptop Pro" [ref=e38]
+          - generic [ref=e39]:
+            - generic [ref=e40]: Laptop Pro
+            - generic [ref=e41]: "Price: $1200"
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - generic [ref=e44]: "Qty:"
+                - spinbutton "Qty:" [ref=e45]: "1"
+              - button "Add to Cart" [ref=e46] [cursor=pointer]
+        - generic [ref=e48]:
+          - img "Wireless Mouse" [ref=e49]
+          - generic [ref=e50]:
+            - generic [ref=e51]: Wireless Mouse
+            - generic [ref=e52]: "Price: $25"
+            - generic [ref=e53]:
+              - generic [ref=e54]:
+                - generic [ref=e55]: "Qty:"
+                - spinbutton "Qty:" [ref=e56]: "1"
+              - button "Add to Cart" [ref=e57] [cursor=pointer]
+        - generic [ref=e59]:
+          - img "Keyboard RGB" [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]: Keyboard RGB
+            - generic [ref=e63]: "Price: $80"
+            - generic [ref=e64]:
+              - generic [ref=e65]:
+                - generic [ref=e66]: "Qty:"
+                - spinbutton "Qty:" [ref=e67]: "1"
+              - button "Add to Cart" [ref=e68] [cursor=pointer]
+        - generic [ref=e70]:
+          - img "Headphones Noise Cancelling" [ref=e71]
+          - generic [ref=e72]:
+            - generic [ref=e73]: Headphones Noise Cancelling
+            - generic [ref=e74]: "Price: $150"
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - generic [ref=e77]: "Qty:"
+                - spinbutton "Qty:" [ref=e78]: "1"
+              - button "Add to Cart" [ref=e79] [cursor=pointer]
+        - generic [ref=e81]:
+          - img "External SSD 1TB" [ref=e82]
+          - generic [ref=e83]:
+            - generic [ref=e84]: External SSD 1TB
+            - generic [ref=e85]: "Price: $180"
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - generic [ref=e88]: "Qty:"
+                - spinbutton "Qty:" [ref=e89]: "1"
+              - button "Add to Cart" [ref=e90] [cursor=pointer]
+        - generic [ref=e92]:
+          - img "Monitor 4K" [ref=e93]
+          - generic [ref=e94]:
+            - generic [ref=e95]: Monitor 4K
+            - generic [ref=e96]: "Price: $350"
+            - generic [ref=e97]:
+              - generic [ref=e98]:
+                - generic [ref=e99]: "Qty:"
+                - spinbutton "Qty:" [ref=e100]: "1"
+              - button "Add to Cart" [ref=e101] [cursor=pointer]
+        - generic [ref=e103]:
+          - img "Coca Cola 250ml" [ref=e104]
+          - generic [ref=e105]:
+            - generic [ref=e106]: Coca Cola 250ml
+            - generic [ref=e107]: "Price: $1"
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - generic [ref=e110]: "Qty:"
+                - spinbutton "Qty:" [ref=e111]: "1"
+              - button "Add to Cart" [ref=e112] [cursor=pointer]
+        - generic [ref=e114]:
+          - img "Mango Drink" [ref=e115]
+          - generic [ref=e116]:
+            - generic [ref=e117]: Mango Drink
+            - generic [ref=e118]: "Price: $2"
+            - generic [ref=e119]:
+              - generic [ref=e120]:
+                - generic [ref=e121]: "Qty:"
+                - spinbutton "Qty:" [ref=e122]: "1"
+              - button "Add to Cart" [ref=e123] [cursor=pointer]
+        - generic [ref=e125]:
+          - img "Beauty Product" [ref=e126]
+          - generic [ref=e127]:
+            - generic [ref=e128]: Beauty Product
+            - generic [ref=e129]: "Price: $30"
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e132]: "Qty:"
+                - spinbutton "Qty:" [ref=e133]: "1"
+              - button "Add to Cart" [ref=e134] [cursor=pointer]
+        - generic [ref=e136]:
+          - img "Premium Earphone" [ref=e137]
+          - generic [ref=e138]:
+            - generic [ref=e139]: Premium Earphone
+            - generic [ref=e140]: "Price: $75"
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - generic [ref=e143]: "Qty:"
+                - spinbutton "Qty:" [ref=e144]: "1"
+              - button "Add to Cart" [ref=e145] [cursor=pointer]
+        - generic [ref=e147]:
+          - img "Gold Zipper Bag" [ref=e148]
+          - generic [ref=e149]:
+            - generic [ref=e150]: Gold Zipper Bag
+            - generic [ref=e151]: "Price: $90"
+            - generic [ref=e152]:
+              - generic [ref=e153]:
+                - generic [ref=e154]: "Qty:"
+                - spinbutton "Qty:" [ref=e155]: "1"
+              - button "Add to Cart" [ref=e156] [cursor=pointer]
+        - generic [ref=e158]:
+          - img "Iphone 14 pro" [ref=e159]
+          - generic [ref=e160]:
+            - generic [ref=e161]: Iphone 14 pro
+            - generic [ref=e162]: "Price: $1000"
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e165]: "Qty:"
+                - spinbutton "Qty:" [ref=e166]: "1"
+              - button "Add to Cart" [ref=e167] [cursor=pointer]
+        - generic [ref=e169]:
+          - img "Premium Ladies Purse" [ref=e170]
+          - generic [ref=e171]:
+            - generic [ref=e172]: Premium Ladies Purse
+            - generic [ref=e173]: "Price: $50"
+            - generic [ref=e174]:
+              - generic [ref=e175]:
+                - generic [ref=e176]: "Qty:"
+                - spinbutton "Qty:" [ref=e177]: "1"
+              - button "Add to Cart" [ref=e178] [cursor=pointer]
+        - generic [ref=e180]:
+          - img "Ladies Shoes" [ref=e181]
+          - generic [ref=e182]:
+            - generic [ref=e183]: Ladies Shoes
+            - generic [ref=e184]: "Price: $60"
+            - generic [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]: "Qty:"
+                - spinbutton "Qty:" [ref=e188]: "1"
+              - button "Add to Cart" [ref=e189] [cursor=pointer]
+        - generic [ref=e191]:
+          - img "QPhone" [ref=e192]
+          - generic [ref=e193]:
+            - generic [ref=e194]: QPhone
+            - generic [ref=e195]: "Price: $200"
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - generic [ref=e198]: "Qty:"
+                - spinbutton "Qty:" [ref=e199]: "1"
+              - button "Add to Cart" [ref=e200] [cursor=pointer]
+        - generic [ref=e202]:
+          - img "QPhone 128GB" [ref=e203]
+          - generic [ref=e204]:
+            - generic [ref=e205]: QPhone 128GB
+            - generic [ref=e206]: "Price: $250"
+            - generic [ref=e207]:
+              - generic [ref=e208]:
+                - generic [ref=e209]: "Qty:"
+                - spinbutton "Qty:" [ref=e210]: "1"
+              - button "Add to Cart" [ref=e211] [cursor=pointer]
+        - generic [ref=e213]:
+          - img "Rosemary Oil" [ref=e214]
+          - generic [ref=e215]:
+            - generic [ref=e216]: Rosemary Oil
+            - generic [ref=e217]: "Price: $15"
+            - generic [ref=e218]:
+              - generic [ref=e219]:
+                - generic [ref=e220]: "Qty:"
+                - spinbutton "Qty:" [ref=e221]: "1"
+              - button "Add to Cart" [ref=e222] [cursor=pointer]
+        - generic [ref=e224]:
+          - img "Premium Sampoo" [ref=e225]
+          - generic [ref=e226]:
+            - generic [ref=e227]: Premium Sampoo
+            - generic [ref=e228]: "Price: $20"
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - generic [ref=e231]: "Qty:"
+                - spinbutton "Qty:" [ref=e232]: "1"
+              - button "Add to Cart" [ref=e233] [cursor=pointer]
+        - generic [ref=e235]:
+          - img "Wireless EarPhone" [ref=e236]
+          - generic [ref=e237]:
+            - generic [ref=e238]: Wireless EarPhone
+            - generic [ref=e239]: "Price: $110"
+            - generic [ref=e240]:
+              - generic [ref=e241]:
+                - generic [ref=e242]: "Qty:"
+                - spinbutton "Qty:" [ref=e243]: "1"
+              - button "Add to Cart" [ref=e244] [cursor=pointer]
+        - generic [ref=e246]:
+          - img "wireless Earbud" [ref=e247]
+          - generic [ref=e248]:
+            - generic [ref=e249]: wireless Earbud
+            - generic [ref=e250]: "Price: $130"
+            - generic [ref=e251]:
+              - generic [ref=e252]:
+                - generic [ref=e253]: "Qty:"
+                - spinbutton "Qty:" [ref=e254]: "1"
+              - button "Add to Cart" [ref=e255] [cursor=pointer]
+      - generic [ref=e259]:
+        - generic [ref=e260]:
+          - heading "Shipping Address" [level=2] [ref=e261]
+          - button [ref=e262] [cursor=pointer]
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - generic [ref=e265]: "Full Name:"
+            - textbox "Full Name:" [ref=e266]
+          - generic [ref=e267]:
+            - generic [ref=e268]: "Street Address:"
+            - textbox "Street Address:" [ref=e269]
+          - generic [ref=e270]:
+            - generic [ref=e271]:
+              - generic [ref=e272]: "City:"
+              - textbox "City:" [ref=e273]
+            - generic [ref=e274]:
+              - generic [ref=e275]: "State:"
+              - textbox "State:" [ref=e276]: NY
+            - generic [ref=e277]:
+              - generic [ref=e278]: "ZIP Code:"
+              - textbox "ZIP Code:" [ref=e279]: "10001"
+          - button "Save Address & Continue to Payment" [ref=e280] [cursor=pointer]
+      - link "Back To Home Page ➡️" [ref=e282] [cursor=pointer]:
+        - /url: /
+  - contentinfo [ref=e283]:
+    - generic [ref=e284]:
+      - paragraph [ref=e285]: Ready to start automating? Explore, practice, and master!
+      - text: © 2025 TesterBud | Built for learners by learners 🚀
+```
