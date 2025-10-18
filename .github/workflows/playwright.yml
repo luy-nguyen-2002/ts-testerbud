@@ -72,42 +72,42 @@ jobs:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Google Chrome" --grep "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Google Chrome" --grep "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Priority tests — Microsoft Edge (@smoke|@positive)
         env:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Microsoft Edge" --grep "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Microsoft Edge" --grep "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Priority tests — Apple Safari (@smoke|@positive)
         env:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Apple Safari" --grep "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Apple Safari" --grep "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Priority tests — Mozilla Firefox (@smoke|@positive)
         env:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Mozilla Firefox" --grep "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Mozilla Firefox" --grep "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Priority tests — Samsung Internet (Android) (@smoke|@positive)
         env:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Samsung Internet (Android)" --grep "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Samsung Internet (Android)" --grep "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Priority tests — Opera / Brave (Chromium) (@smoke|@positive)
         env:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Opera / Brave (Chromium)" --grep "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Opera / Brave (Chromium)" --grep "@smoke|@positive" --reporter=list,html,allure-playwright
 
       # ---------- Remaining tests: run on browsers in same order ----------
       - name: Remaining tests — Google Chrome (everything else)
@@ -116,7 +116,7 @@ jobs:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Google Chrome" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Google Chrome" --grep-invert "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Remaining tests — Microsoft Edge (everything else)
         if: always()
@@ -124,7 +124,7 @@ jobs:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Microsoft Edge" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Microsoft Edge" --grep-invert "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Remaining tests — Apple Safari (everything else)
         if: always()
@@ -132,7 +132,7 @@ jobs:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Apple Safari" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Apple Safari" --grep-invert "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Remaining tests — Mozilla Firefox (everything else)
         if: always()
@@ -140,7 +140,7 @@ jobs:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Mozilla Firefox" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Mozilla Firefox" --grep-invert "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Remaining tests — Samsung Internet (Android) (everything else)
         if: always()
@@ -148,7 +148,7 @@ jobs:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Samsung Internet (Android)" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Samsung Internet (Android)" --grep-invert "@smoke|@positive" --reporter=list,html,allure-playwright
 
       - name: Remaining tests — Opera / Brave (Chromium) (everything else)
         if: always()
@@ -156,7 +156,7 @@ jobs:
           CI: "true"
           HEADLESS: "true"
         run: |
-          npx playwright test --project="Opera / Brave (Chromium)" --grep-invert "@smoke|@positive" --reporter=list,allure-playwright
+          npx playwright test --project="Opera / Brave (Chromium)" --grep-invert "@smoke|@positive" --reporter=list,html,allure-playwright
       
       # ---------------------------------------------------------------
       - name: Generate Allure HTML report
