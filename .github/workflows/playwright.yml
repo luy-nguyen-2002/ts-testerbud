@@ -188,6 +188,6 @@ jobs:
           name: playwright-artifacts
           path: |
             test-results/
-            # traces/
-            # videos/
+            traces/
+            videos/
           retention-days: 30
